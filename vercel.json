@@ -1,0 +1,21 @@
+{
+    "builds": [
+    {
+      "src": "*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "cleanUrls":true,
+  "trailingSlash":false,
+  "rewrites":
+  [
+    {
+      "source": "/get",
+      "destination": "/server.js"
+    },
+    {
+      "source": "/updateLikes/:id/:increment",
+      "destination": "/server.js"
+    }
+  ]
+}
